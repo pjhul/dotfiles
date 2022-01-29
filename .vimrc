@@ -1,3 +1,40 @@
+syntax on
+set incsearch
+set number
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set autoindent
+set laststatus=2
+set hlsearch
+set showcmd
+set notimeout ttimeout ttimeoutlen=200
+set expandtab
+set hidden
+set ic
+set nowrap
+set ru
+set nobackup
+set noswapfile
+set cmdheight=2
+set cursorline
+set encoding=utf-8
+
+
+let mapleader = " "
+
+call plug#begin()
+
+Plug 'vim-utils/vim-man'
+Plug 'pangloss/vim-javascript'
+Plug 'jparise/vim-graphql'
+Plug 'tpope/vim-fugitive'
+Plug 'leafgarland/typescript-vim'
+
+Plug 'itchyny/lightline.vim'
+Plug 'morhetz/gruvbox'
+
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
   let $FZF_DEFAULT_COMMAND='find . -type f -not -path "*/\.git/*"'
@@ -97,13 +134,20 @@ nmap <silent> <leader>d <C-d>
 
 inoremap jj <ESC>
 
-map <unique> <leader>rd <Plug>DrawItStart
-map <unique> <leader>rs <Plug>DrawItStop
+map <leader>rd <Plug>DrawItStart
+map <leader>rs <Plug>DrawItStop
 
 " Insert new line without entering insert
 nnoremap <C-J> i<CR><Esc>
 
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
+
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 nmap <leader>a <Plug>(coc-codeaction-selected)
