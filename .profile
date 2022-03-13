@@ -32,4 +32,5 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 export EDITOR="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
-export PAGER='vim -R -u ~/.vimrcpg -'
+# export PAGER='vim -R -u ~/.vimrcpg -'
+. "$HOME/.cargo/env"

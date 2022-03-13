@@ -4,6 +4,7 @@ set number
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
+set signcolumn=number
 set autoindent
 set laststatus=2
 set hlsearch
@@ -19,6 +20,7 @@ set noswapfile
 set cmdheight=2
 set cursorline
 set encoding=utf-8
+set colorcolumn=80
 
 
 let mapleader = " "

@@ -112,3 +112,4 @@ if ! shopt -oq posix; then
 fi
 
 complete -C /usr/bin/terraform terraform
+. "$HOME/.cargo/env"
