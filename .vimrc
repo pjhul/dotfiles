@@ -100,8 +100,8 @@ Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-editors/vim-elixir'
 
 " Svelte plugins
-Plug 'leafOfTree/vim-svelte-plugin'
-" Plug 'evanleck/vim-svelte', {'branch': 'main'}
+" Plug 'leafOfTree/vim-svelte-plugin'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
   " let g:svelte_indent_script = 1
   " let g:svelte_indent_style = 4
@@ -109,6 +109,12 @@ Plug 'leafOfTree/vim-svelte-plugin'
   let g:vim_svelte_plugin_use_typescript = 1
 
 Plug 'sheerun/vim-polyglot'
+
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+
+  let g:prettier#autoformat = 1
+  let g:prettier#autoformat_require_pragma = 0
 
 call plug#end()
 
