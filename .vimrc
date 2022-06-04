@@ -48,8 +48,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
         \ 'coc-svelte',
         \ 'coc-tsserver',
         \ 'coc-json',
+        \ 'coc-docker',
         \ 'coc-yaml',
         \ 'coc-css',
+        \ 'coc-rust-analyzer',
         \ 'coc-html'
     \ ]
   " GoTo Code Navigation

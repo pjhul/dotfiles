@@ -113,3 +113,14 @@ fi
 
 complete -C /usr/bin/terraform terraform
 . "$HOME/.cargo/env"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/pjhul/google-cloud-sdk/path.bash.inc' ]; then . '/home/pjhul/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/pjhul/google-cloud-sdk/completion.bash.inc' ]; then . '/home/pjhul/google-cloud-sdk/completion.bash.inc'; fi
+
+# pnpm
+export PNPM_HOME="/home/pjhul/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

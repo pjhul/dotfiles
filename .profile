@@ -26,9 +26,10 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-export NODEJS_HOME=/usr/local/lib/nodejs/node-v16.9.0-linux-x64
+export NODEJS_HOME=/usr/local/lib/nodejs/node-v16.15.0-linux-x64
 export PATH=$NODEJS_HOME/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+export PATH=$PATH:/usr/local/src/depot_tools
 
 export EDITOR="/usr/bin/vim"
 export EDITOR="/usr/bin/vim"
