@@ -1,11 +1,13 @@
-**/**
-*
-!kde-setup.sh
+/*
 !.vimrc
 !.gitignore
-!.config
-!.config/i3/config
 !.fehbg
+!.profile
+
+# base files
 !.bashrc
 !.bash_aliases
-!.profile
+
+!/.config
+/.config/*
+!/.config/i3
